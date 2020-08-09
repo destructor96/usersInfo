@@ -11,6 +11,7 @@ const signInApiCall = (user) => {
       
       if (response.status == 200) {
         if (response.data.statusCode == 200) {
+          window.location.replace("UserDetails.html?user=" + response['data']['user'])
           console.log(`Success: `, response);
         }
         else if (response.data.statusCode == 401) {
