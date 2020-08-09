@@ -137,7 +137,6 @@
                         <th>Occupation</th>
                         <th>DOB</th>
                         <th>Edit</th>
-                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody id="user-groups-table">
@@ -150,6 +149,9 @@
                     Not Found.
                 </label>
             </div>
+            <div class="container-login100-form-btn" id="UserInputButton" style="display: none;align-items: center;padding: 0px;margin: 0px;">
+                <button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm">Input User Data</button>
+            </div>
         </div>
     </div>
     <div id="edit" class="modal fade" role="dialog">
@@ -160,32 +162,13 @@
                     <button type="button" class="popupCloseBtn close" data-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
-                    <div id="ID" type="text" class="form-control" name="id" >
-                        </div>
                     <input id="FullName" type="text" class="form-control" name="fname" placeholder="Full Name">
                     <input id="Email" type="text" class="form-control" name="fname" placeholder="Email">
-                    <input id="Designation" type="text" class="form-control" name="fname" placeholder="Designation">
-                    <input id="UniversityID" type="text" class="form-control" name="fname" placeholder="University Id">
+                    <input id="Occupation" type="text" class="form-control" name="fname" placeholder="Occupation">
+                    <input id="DOB" type="text" class="form-control" name="fname" placeholder="DOB">
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="up" class="btn btn-warning" data-dismiss="modal" onclick="updateUserData()">Update</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="delete" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div style="color: black; background-color: mediumspringgreen" class="modal-header">
-                    <h4 class="modal-title">Delete Data</h4>
-                    <button type="button" class="popupCloseBtn close" data-dismiss="modal">×</button>
-                </div>
-                <div class="modal-body">
-                    <strong id="delete-user-modal">Are you sure you want to delete this data?</strong>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="del" class="btn btn-danger" data-dismiss="modal" onclick="deleteUserData()">Delete</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
